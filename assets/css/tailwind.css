@@ -1,0 +1,24 @@
+/* tailwind.css */
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+* {
+  font-variation-settings: "slnt" 0deg;
+}
+.italic {
+  font-variation-settings: "slnt" 10deg;
+}
+
+@font-face {
+  font-family: "Jetbrains Mono Variable";
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: normal;
+  src: url("/fonts/JetBrainsMono[wght].woff2") format("woff2");
+}
