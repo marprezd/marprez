@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
     'nuxt-primevue',
-    'unplugin-icons/nuxt'
+    'unplugin-icons/nuxt',
+    '@nuxt/image'
   ],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference.
@@ -42,5 +43,13 @@ export default defineNuxtConfig({
       exclude: ['Editor']
     }
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  image: {
+    quality: 80,
+    domains: ['res.cloudinary.com'],
+    format: ['avif', 'webp', 'jpeg', 'jpg', 'png'],
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/dieoeaoiy/image/upload/'
+    }
+  }
 })
