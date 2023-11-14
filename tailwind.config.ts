@@ -72,6 +72,25 @@ export default <Partial<Config>> {
           900: '#0f0f0f',
           950: '#080808'
         }
+      },
+      animation: {
+        blink: '1s infinite' // typewriter animation
+      },
+      keyframes: {
+        blink: {
+          '0%': {
+            borderColor: 'transparent'
+          },
+          '45%': {
+            borderColor: 'transparent'
+          },
+          '50%': {
+            borderColor: '#9CA3AF'
+          },
+          '100%': {
+            borderColor: '#9CA3AF'
+          }
+        }
       }
     }
   },
