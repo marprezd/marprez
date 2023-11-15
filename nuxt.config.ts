@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-primevue',
     'unplugin-icons/nuxt',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/i18n'
   ],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference.
@@ -51,5 +52,34 @@ export default defineNuxtConfig({
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/dieoeaoiy/image/upload/'
     }
+  },
+  i18n: {
+    baseUrl: 'https://marprez.vercel.app',
+    customRoutes: 'config',
+    strategy: 'prefix',
+    defaultLocale: 'en',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+        file: 'en.ts'
+      },
+      {
+        code: 'es',
+        iso: 'es-ES',
+        name: 'Español',
+        file: 'es.ts'
+      },
+      {
+        code: 'tr',
+        iso: 'tr-TR',
+        name: 'Türkçe',
+        file: 'tr.ts'
+      }
+    ],
+    lazy: true,
+    langDir: 'translations',
+    vueI18n: './i18n.config.ts'
   }
 })
