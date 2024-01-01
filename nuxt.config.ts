@@ -1,17 +1,26 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config'
-import path from 'path'
 
 export default defineNuxtConfig({
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        trailingSlash: 'append'
+      }
+    }
+  },
   modules: [
-    '@nuxtjs/color-mode',
+    '@nuxt/ui',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/tailwindcss',
-    'nuxt-primevue',
     'unplugin-icons/nuxt',
     '@nuxt/image',
     '@nuxtjs/i18n'
   ],
+  plugins: ['~/plugins/preline.client.ts'],
+  ui: {
+    global: true,
+    icons: ['heroicons', 'tabler']
+  },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference.
     fallback: 'light', // fallback value if not system preference found.
@@ -32,17 +41,6 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config'
-  },
-  primevue: {
-    options: {
-      unstyled: true,
-      ripple: true
-    },
-    cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities',
-    importPT: { as: 'CustomTailwind', from: path.resolve(__dirname, './assets/presets/custom-tw.js') },
-    components: {
-      exclude: ['Editor']
-    }
   },
   devtools: { enabled: true },
   image: {
