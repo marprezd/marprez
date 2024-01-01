@@ -4,6 +4,7 @@ import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import typography from '@tailwindcss/typography'
+import preline from 'preline/plugin'
 
 export default <Partial<Config>> {
   content: [
@@ -19,8 +20,7 @@ export default <Partial<Config>> {
     './error.{js,ts,vue}',
     './app.config.{js,ts}',
     'content/**/*.md',
-    './node_modules/primevue/**/*.{vue,js,ts,jsx,tsx}',
-    './assets/presets/custom-tw.js'
+    './node_modules/preline/preline.js'
   ],
   darkMode: 'class',
   theme: {
@@ -43,35 +43,8 @@ export default <Partial<Config>> {
         transparent: 'transparent',
         current: 'currentColor',
         white: colors.white,
-        primary: colors.cyan,
         secondary: colors.pink,
-        tertiary: colors.orange,
-        light: {
-          50: '#fdfdfd',
-          100: '#fcfcfc',
-          200: '#fafafa',
-          300: '#f8f9fa',
-          400: '#f6f6f6',
-          500: '#f2f2f2',
-          600: '#f1f3f5',
-          700: '#e9ecef',
-          800: '#dee2e6',
-          900: '#dde1e3',
-          950: '#d8dcdf'
-        },
-        dark: {
-          50: '#4a4a4a',
-          100: '#3c3c3c',
-          200: '#323232',
-          300: '#2d2d2d',
-          400: '#222222',
-          500: '#1f1f1f',
-          600: '#1c1c1e',
-          700: '#1b1b1b',
-          800: '#181818',
-          900: '#0f0f0f',
-          950: '#080808'
-        }
+        tertiary: colors.orange
       },
       animation: {
         blink: '1s infinite' // typewriter animation
@@ -94,5 +67,5 @@ export default <Partial<Config>> {
       }
     }
   },
-  plugins: [typography]
+  plugins: [typography, preline]
 }
