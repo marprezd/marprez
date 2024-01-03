@@ -35,6 +35,11 @@ export default <Partial<Config>> {
       }
     },
     extend: {
+      backgroundImage: {
+       'heroLight': "url('https://res.cloudinary.com/dieoeaoiy/image/upload/v1704152302/marprez-dev/hero/polygon-bg-light_p7semz.svg')",
+       'heroDark': "url('https://res.cloudinary.com/dieoeaoiy/image/upload/v1704152302/marprez-dev/hero/polygon-bg-dark_grrrz9.svg')"
+
+      },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: ['Jetbrains Mono Variable', ...defaultTheme.fontFamily.mono]
