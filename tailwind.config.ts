@@ -36,14 +36,8 @@ export default <Partial<Config>> {
     },
     extend: {
       backgroundImage: {
-<<<<<<< HEAD
         heroLight: "url('https://res.cloudinary.com/dieoeaoiy/image/upload/v1704152302/marprez-dev/hero/polygon-bg-light_p7semz.svg')",
         heroDark: "url('https://res.cloudinary.com/dieoeaoiy/image/upload/v1704152302/marprez-dev/hero/polygon-bg-dark_grrrz9.svg')"
-=======
-       'heroLight': "url('https://res.cloudinary.com/dieoeaoiy/image/upload/v1704152302/marprez-dev/hero/polygon-bg-light_p7semz.svg')",
-       'heroDark': "url('https://res.cloudinary.com/dieoeaoiy/image/upload/v1704152302/marprez-dev/hero/polygon-bg-dark_grrrz9.svg')"
->>>>>>> 5bcf33969ca3a812a1d99ef7b9d78509b77934d3
-
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
