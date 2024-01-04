@@ -24,7 +24,11 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system', // default value of $colorMode.preference.
     fallback: 'light', // fallback value if not system preference found.
-    classSuffix: '' // set the classSuffix option to an empty string to compatibility with Tailwindcss.
+    classSuffix: '', // set the classSuffix option to an empty string to compatibility with Tailwindcss.
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    storageKey: 'nuxt-color-mode'
   },
   googleFonts: {
     families: {
@@ -79,5 +83,6 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'translations',
     vueI18n: './i18n.config.ts'
-  }
+  },
+  components: { global: true, dirs: ['~/components'] }
 })
